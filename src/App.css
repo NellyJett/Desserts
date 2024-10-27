@@ -1,5 +1,30 @@
 
 
-h1{
-  color: red;
+.img-1{
+  background: url('/images/img1.jpeg')center/cover;
+}
+
+.img-2{
+  background: url('/images/img2.jpeg')center/cover;
+}
+.img-3{
+  background: url('/images/img3.webp')center/cover;
+}
+.img-4{
+  background: url('/images/img-4.jpeg')center/cover;
+}
+.img-5{
+  background: url('/images/img-5.webp')center/cover;
+}
+.img-6{
+  background: url('/images/img6.jpeg')center/cover;
+}
+.img-7{
+  background: url('/images/img7.webp')center/cover;
+}
+.img-8{
+  background: url('/images/img8.jpeg')center/cover;
+}
+.img-9{
+  background: url('/images/img9.webp')center/cover;
 }
