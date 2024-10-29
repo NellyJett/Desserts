@@ -11,20 +11,26 @@
   background: url('/images/img3.webp')center/cover;
 }
 .img-4{
-  background: url('/images/img-4.jpeg')center/cover;
+  background: url('/images/img4.jpeg')center/cover;
 }
 .img-5{
-  background: url('/images/img-5.webp')center/cover;
+  background: url('/images/img5.webp')center/cover;
 }
 .img-6{
-  background: url('/images/img6.jpeg')center/cover;
+  background: url('/images/img6.webp')center/cover;
 }
 .img-7{
-  background: url('/images/img7.webp')center/cover;
+  background: url('/images/img7.jpeg')center/cover;
 }
 .img-8{
   background: url('/images/img8.jpeg')center/cover;
 }
 .img-9{
   background: url('/images/img9.webp')center/cover;
+}
+.icon{
+  color:#E28913 ;
+}
+.tree{
+  background: url('/images/tree.jpeg')center/cover;
 }
