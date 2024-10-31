@@ -8,7 +8,7 @@ const ShoppingCart = ({ cart = [], onDelete, cartContainer, onConfirmOrder }) =>
   return (
     <div className={`bg-white shadow-lg rounded-md p-4 ${cartContainer} flex flex-col`}>
       {/* Shopping Cart */}
-      <div className="flex flex-col-reverse">
+      <div className="group-1">
         <h2 className="text-xl font-bold mb-4">Cart</h2>
         <div className='hover:scrollbar-thumb-sky-500 active:scrollbar-thumb-sky-400 max-h-48 scrollbar scrollbar-thumb-slate-500 scrollbar-track-slate-200 overflow-y-scroll'>
           {cart.length === 0 ? (
