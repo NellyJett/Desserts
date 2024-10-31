@@ -55,7 +55,7 @@ export const Desserts = () => {
     };
 
     return (
-        <div className="w-full pl-6 pr-6 mt-6 flex flex-col sm:flex-row gap-6">
+        <div className="w-full pl-6 pr-6 mt-6 flex flex-col sm:flex-row gap-6 ">
 
             {/* Desserts Section */}
             <div className="place-content-center sm:w-[65%]">
@@ -66,37 +66,25 @@ export const Desserts = () => {
                         return (
                             <div key={dessert.id}>
                                 <div className="relative">
-                                    <div
-                                        className={`${dessert.imgClass} p-4 min-h-[250px] relative rounded-[10px]`}
-                                    />
+                                    <div className={`${dessert.imgClass} p-4 min-h-[250px] relative rounded-[10px]`}/>
                                     <div className="justify-center absolute flex flex-col bottom-[-25px] transform -translate-x-1/2 left-1/2">
-                                        {quantity > 0 ? (
-                                            <div className="flex items-center gap-2">
-                                                <button
-                                                    onClick={() => decrementQuantity(dessert)}
-                                                    className="rounded-full border border-black-2 p-2 bg-white shadow-lg"
-                                                >
-                                                    -
-                                                </button>
-                                                <span className="font-bold">{quantity}</span>
-                                                <button
-                                                    onClick={() => incrementQuantity(dessert)}
-                                                    className="rounded-full border border-black-2 p-2 bg-white shadow-lg"
-                                                >
-                                                    +
-                                                </button>
-                                            </div>
-                                        ) : (
-                                            <button
-                                                onClick={() => incrementQuantity(dessert)}
-                                                className="rounded-full border border-black-2 p-2 bg-white shadow-lg w-40 flex gap-2 pl-4 pr-4"
-                                                style={{ backgroundColor: quantity > 0 ? '#b68c42' : 'white' }} 
-                                            >
-                                                <ShoppingCartIcon className="icon h-5 w-5" />
-                                                Add to Cart
-                                            </button>
-                                        )}
+                                    {quantity > 0 ? (
+                                        <button className="rounded-full border border-black-2 p-2 bg-white shadow-lg w-40 flex items-center justify-between gap-4 px-4"
+                                            style={{ backgroundColor: '#E28913' }}>
+                                            <span onClick={() => decrementQuantity(dessert)} className="cursor-pointer">−</span>
+                                            <span className="font-bold">{quantity}</span>
+                                            <span onClick={() => incrementQuantity(dessert)} className="cursor-pointer">+</span>
+                                        </button>
+                                    ) : (
+                                        // Add to Cart Button
+                                        <button onClick={() => incrementQuantity(dessert)}
+                                        className="rounded-full border border-black-2 p-2 bg-white shadow-lg w-40 flex items-center justify-center gap-2">
+                                            <ShoppingCartIcon className="h-5 w-5" />
+                                            Add to Cart
+                                        </button>
+                                    )}
                                     </div>
+
                                 </div>
                                 <div className="pt-6">
                                     <p className="mt-2 text-gray-400">{dessert.name.split(' ')[0]}</p>
@@ -115,7 +103,7 @@ export const Desserts = () => {
             <ShoppingCart
                 cart={cart}
                 onDelete={(id) => setCart((prevCart) => prevCart.filter((item) => item.id !== id))}
-                cartContainer="h-[600px] w-[97%] sm:w-[50%] md:w-[30%] lg:w-[35%] overflow-y-auto border border-gray-300 p-4"
+                cartContainer="h-[500px] w-[97%] sm:w-[50%] md:w-[30%] lg:w-[35%] overflow-y-auto border border-gray-300 p-4"
                 onConfirmOrder={handleConfirmOrder} // confirm order handler
             />
         </div>
