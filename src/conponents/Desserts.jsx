@@ -55,12 +55,12 @@ export const Desserts = () => {
     };
 
     return (
-        <div className="w-full pl-6 pr-6 mt-6 flex flex-col sm:flex-row gap-6 ">
+        <div className="w-full pl-6 pr-6 mt-6 flex flex-col sm:flex-row gap-6  overflow-hidden">
 
             {/* Desserts Section */}
-            <div className="place-content-center sm:w-[65%]">
+            <div className="place-content-center sm:w-[65%] ">
                 <h1 className="font-extrabold mb-6 text-3xl">Desserts</h1>
-                <div className="grid sm:grid-cols-3 grid-cols-1 w-full gap-4 pb-6">
+                <div className="hover:scrollbar-thumb-sky-500 grid sm:grid-cols-3 grid-cols-1 w-full gap-4 pb-6 overflow-y-scroll max-h-[100vh]">
                     {desserts.map((dessert) => {
                         const quantity = getItemQuantity(dessert.id);
                         return (
@@ -103,7 +103,7 @@ export const Desserts = () => {
             <ShoppingCart
                 cart={cart}
                 onDelete={(id) => setCart((prevCart) => prevCart.filter((item) => item.id !== id))}
-                cartContainer="h-[500px] w-[97%] sm:w-[50%] md:w-[30%] lg:w-[35%] overflow-y-auto border border-gray-300 p-4"
+                cartContainer="h-[600px] w-[97%] sm:w-[50%] md:w-[30%] lg:w-[35%] overflow-y-auto border border-gray-300 p-4"
                 onConfirmOrder={handleConfirmOrder} // confirm order handler
             />
         </div>
