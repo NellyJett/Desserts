@@ -10,7 +10,7 @@ const ShoppingCart = ({ cart = [], onDelete, cartContainer, onConfirmOrder }) =>
       {/* Shopping Cart */}
       <div className="group-1">
         <h2 className="text-xl font-bold mb-4">Cart</h2>
-        <div className='hover:scrollbar-thumb-sky-500 active:scrollbar-thumb-sky-400 max-h-48 scrollbar scrollbar-thumb-slate-500 scrollbar-track-slate-200 overflow-y-scroll'>
+        <div className='hover:scrollbar-thumb-sky-500 active:scrollbar-thumb-sky-400 max-h-48 scrollbar-thumb-slate-500 scrollbar-thin overflow-y-scroll'>
           {cart.length === 0 ? (
             <p>Your cart is empty.</p>
           ) : (
