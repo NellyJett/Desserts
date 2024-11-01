@@ -71,9 +71,9 @@ export const Desserts = () => {
                                     {quantity > 0 ? (
                                         <button className="rounded-full border border-black-2 p-2 bg-white shadow-lg w-40 flex items-center justify-between gap-4 px-4"
                                             style={{ backgroundColor: '#E28913' }}>
-                                            <span onClick={() => decrementQuantity(dessert)} className="cursor-pointer">−</span>
-                                            <span className="font-bold">{quantity}</span>
-                                            <span onClick={() => incrementQuantity(dessert)} className="cursor-pointer">+</span>
+                                            <span onClick={() => decrementQuantity(dessert)} className="cursor-pointer text-[#ffffff]">−</span>
+                                            <span className="font-bold text-[#ffffff]">{quantity}</span>
+                                            <span onClick={() => incrementQuantity(dessert)} className="cursor-pointer text-[#ffffff]">+</span>
                                         </button>
                                     ) : (
                                         // Add to Cart Button
